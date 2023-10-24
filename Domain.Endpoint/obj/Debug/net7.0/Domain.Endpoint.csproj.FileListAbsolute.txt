@@ -1,0 +1,11 @@
+C:\Users\user\Desktop\Learn2SwitchApi\Domain.Endpoint\bin\Debug\net7.0\Domain.Endpoint.deps.json
+C:\Users\user\Desktop\Learn2SwitchApi\Domain.Endpoint\bin\Debug\net7.0\Domain.Endpoint.dll
+C:\Users\user\Desktop\Learn2SwitchApi\Domain.Endpoint\bin\Debug\net7.0\Domain.Endpoint.pdb
+C:\Users\user\Desktop\Learn2SwitchApi\Domain.Endpoint\obj\Debug\net7.0\Domain.Endpoint.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\Learn2SwitchApi\Domain.Endpoint\obj\Debug\net7.0\Domain.Endpoint.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\Learn2SwitchApi\Domain.Endpoint\obj\Debug\net7.0\Domain.Endpoint.AssemblyInfo.cs
+C:\Users\user\Desktop\Learn2SwitchApi\Domain.Endpoint\obj\Debug\net7.0\Domain.Endpoint.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Learn2SwitchApi\Domain.Endpoint\obj\Debug\net7.0\Domain.Endpoint.dll
+C:\Users\user\Desktop\Learn2SwitchApi\Domain.Endpoint\obj\Debug\net7.0\refint\Domain.Endpoint.dll
+C:\Users\user\Desktop\Learn2SwitchApi\Domain.Endpoint\obj\Debug\net7.0\Domain.Endpoint.pdb
+C:\Users\user\Desktop\Learn2SwitchApi\Domain.Endpoint\obj\Debug\net7.0\ref\Domain.Endpoint.dll

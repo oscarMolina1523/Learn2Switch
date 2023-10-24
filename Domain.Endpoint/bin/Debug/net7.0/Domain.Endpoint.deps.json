@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Domain.Endpoint/1.0.0": {
+        "runtime": {
+          "Domain.Endpoint.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Domain.Endpoint/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
