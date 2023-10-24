@@ -1,10 +1,5 @@
 var builder = WebApplication.CreateBuilder(args);
 
-IConfigurationRoot config = new ConfigurationBuilder()
-            .AddJsonFile("appsettings.json")
-            .AddEnvironmentVariables()
-            .Build();
-string connectionString = config.GetConnectionString("MSSQLServer") ?? "No Connection String Found";
 
 // Add services to the container.
 
