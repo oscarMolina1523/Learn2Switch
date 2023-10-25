@@ -24,5 +24,19 @@ namespace Learn2SwitchApi.Controllers
             return Ok(newUser);
         }
 
+        [HttpGet("{id}")]
+        public ActionResult<User> GetUsuarioById(Guid Id)
+        {
+            User usuario = _userService.FilterUser(Id);
+            return Ok(usuario);
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<User>>> GetUsuario()
+        {
+            List<User> usuario = await _userService.Get();
+            return Ok(usuario);
+        }
+
     }
 }

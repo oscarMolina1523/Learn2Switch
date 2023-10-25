@@ -27,12 +27,12 @@ namespace Domain.Endpoint.Services
 
         public User FilterUser(Guid id)
         {
-            throw new NotImplementedException();
+            return _userRepository.GetById(id);
         }
 
         public Task<List<User>> Get()
         {
-            throw new NotImplementedException();
+            return _userRepository.GetAll();
         }
     }
 }

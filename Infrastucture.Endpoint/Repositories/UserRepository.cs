@@ -2,6 +2,7 @@
 using Domain.Endpoint.Interfaces;
 using Microsoft.Data.SqlClient;
 using System.Data;
+using System.Reflection.PortableExecutable;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Infrastucture.Endpoint.Repositories
@@ -50,14 +51,54 @@ namespace Infrastucture.Endpoint.Repositories
             sqlCommand.ExecuteNonQuery();
         }
 
-        public Task<List<User>> GetAll()
+        public async Task<List<User>> GetAll()
         {
-            throw new NotImplementedException();
+            string query = "SELECT * FROM USUARIO;";
+            DataTable dataTable =await _dbConexion.ExecuteQueryCommandAsync(query);
+            List<User> usuario = dataTable.AsEnumerable()
+                .Select(MapEntityFromDataRow)
+                .ToList();
+
+            return usuario;
         }
 
-        public Task<User> GetById(Guid id)
+        private User MapEntityFromDataRow(DataRow row)
         {
-            throw new NotImplementedException();
+            return new User()
+            {
+                Id = _dbConexion.GetDataRowValue<Guid>(row, "ID_USUARIO"),
+                UserName = _dbConexion.GetDataRowValue<string>(row, "NOMBRE_USUARIO"),
+                UserEmail = _dbConexion.GetDataRowValue<string>(row, "EMAIL"),
+                UserPassword = _dbConexion.GetDataRowValue<string>(row, "CONTRASEÑA"),
+            };
+        }
+
+        public User GetById(Guid id)
+        {
+            User usuario = null;
+            string getQuery = "SELECT * FROM USUARIO WHERE ID_USUARIO = @UsuarioId;";
+            SqlCommand sqlCommand = _dbConexion.GetCommand(getQuery);
+            SqlParameter parameter = new SqlParameter()
+            {
+                Direction = ParameterDirection.Input,
+                ParameterName = "@UsuarioId",
+                SqlDbType = SqlDbType.UniqueIdentifier,
+                Value = id
+            };
+            sqlCommand.Parameters.Add(parameter);
+            SqlDataReader reader = sqlCommand.ExecuteReader();
+            if (reader.Read())
+            {
+                usuario = new User
+                {
+                    Id = reader.GetGuid(reader.GetOrdinal("ID_USUARIO")),
+                    UserName = reader.GetString(reader.GetOrdinal("NOMBRE_USUARIO")),
+                    UserEmail = reader.GetString(reader.GetOrdinal("EMAIL")),
+                    UserPassword = reader.GetString(reader.GetOrdinal("CONTRASEÑA")),
+                };
+            }
+            reader.Close();
+            return usuario;
         }
     }
 }

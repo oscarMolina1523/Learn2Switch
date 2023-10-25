@@ -6,7 +6,7 @@ namespace Domain.Endpoint.Interfaces
     {
         Task<List<User>> GetAll();
 
-        Task<User> GetById(Guid id);
+        User GetById(Guid id);
 
         void Create(User user);
     }
