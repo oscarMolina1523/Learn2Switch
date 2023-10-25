@@ -1,0 +1,17 @@
+C:\Users\user\Desktop\Learn2SwitchApi\Infrastucture.Endpoint\bin\Debug\net7.0\Infrastucture.Endpoint.deps.json
+C:\Users\user\Desktop\Learn2SwitchApi\Infrastucture.Endpoint\bin\Debug\net7.0\Infrastucture.Endpoint.runtimeconfig.json
+C:\Users\user\Desktop\Learn2SwitchApi\Infrastucture.Endpoint\bin\Debug\net7.0\Infrastucture.Endpoint.dll
+C:\Users\user\Desktop\Learn2SwitchApi\Infrastucture.Endpoint\bin\Debug\net7.0\Infrastucture.Endpoint.pdb
+C:\Users\user\Desktop\Learn2SwitchApi\Infrastucture.Endpoint\bin\Debug\net7.0\Domain.Endpoint.dll
+C:\Users\user\Desktop\Learn2SwitchApi\Infrastucture.Endpoint\bin\Debug\net7.0\Domain.Endpoint.pdb
+C:\Users\user\Desktop\Learn2SwitchApi\Infrastucture.Endpoint\obj\Debug\net7.0\Infrastucture.Endpoint.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Learn2SwitchApi\Infrastucture.Endpoint\obj\Debug\net7.0\Infrastucture.Endpoint.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\Learn2SwitchApi\Infrastucture.Endpoint\obj\Debug\net7.0\Infrastucture.Endpoint.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\Learn2SwitchApi\Infrastucture.Endpoint\obj\Debug\net7.0\Infrastucture.Endpoint.AssemblyInfo.cs
+C:\Users\user\Desktop\Learn2SwitchApi\Infrastucture.Endpoint\obj\Debug\net7.0\Infrastucture.Endpoint.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Learn2SwitchApi\Infrastucture.Endpoint\obj\Debug\net7.0\Infrastucture.Endpoint.csproj.CopyComplete
+C:\Users\user\Desktop\Learn2SwitchApi\Infrastucture.Endpoint\obj\Debug\net7.0\Infrastucture.Endpoint.dll
+C:\Users\user\Desktop\Learn2SwitchApi\Infrastucture.Endpoint\obj\Debug\net7.0\refint\Infrastucture.Endpoint.dll
+C:\Users\user\Desktop\Learn2SwitchApi\Infrastucture.Endpoint\obj\Debug\net7.0\Infrastucture.Endpoint.pdb
+C:\Users\user\Desktop\Learn2SwitchApi\Infrastucture.Endpoint\obj\Debug\net7.0\Infrastucture.Endpoint.genruntimeconfig.cache
+C:\Users\user\Desktop\Learn2SwitchApi\Infrastucture.Endpoint\obj\Debug\net7.0\ref\Infrastucture.Endpoint.dll

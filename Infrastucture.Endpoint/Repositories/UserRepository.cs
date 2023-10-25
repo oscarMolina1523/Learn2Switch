@@ -2,20 +2,23 @@
 using Domain.Endpoint.Interfaces;
 using Microsoft.Data.SqlClient;
 using System.Data;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Infrastucture.Endpoint.Repositories
 {
     public class UserRepository : IUserRepository
     {
-        public UserRepository()
+        private readonly ISingletonSqlConnection _dbConexion;
+        public UserRepository(ISingletonSqlConnection dbConexion)
         {
-                
+            _dbConexion = dbConexion;
         }
 
         public void Create(User user)
         {
-            string insertQuery = "INSERT INTO USUARIO (ID_USUARIO,NOMBRE_USUARIO, CONTRASEÑA, EMAIL) VALUES(@ID,@NombreUsuario,  @Contraseña,@Email)";
-            SqlCommand sqlCommand = _connectionBuilder.GetCommand(insertQuery);
+            string insertQuery = "INSERT INTO USUARIO (ID_USUARIO,NOMBRE_USUARIO, CONTRASEÑA, EMAIL) VALUES(@ID,@NombreUsuario,@Contraseña,@Email)";
+           
+            SqlCommand sqlCommand = _dbConexion.GetCommand(insertQuery);
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter() {
