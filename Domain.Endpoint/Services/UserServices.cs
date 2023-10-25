@@ -14,12 +14,15 @@ namespace Domain.Endpoint.Services
         }
         public User createUser(UserDTO newUserDTO)
         {
+            ServiceEncryptDecrypt enc = new ServiceEncryptDecrypt();
+            string password= enc.Encrypt(newUserDTO.UserPassword);
+
             User nuevoUsuario = new User()
             {
                 Id = Guid.NewGuid(),
                 UserName = newUserDTO.UserName,
                 UserEmail=newUserDTO.UserEmail,
-                UserPassword=newUserDTO.UserPassword,
+                UserPassword=password,
             };
            _userRepository.Create(nuevoUsuario);
            return nuevoUsuario;
