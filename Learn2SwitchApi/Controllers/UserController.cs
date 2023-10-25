@@ -1,4 +1,5 @@
-﻿using Domain.Endpoint.DTOs;
+﻿using Domain.Endpoint;
+using Domain.Endpoint.DTOs;
 using Domain.Endpoint.Entities;
 using Domain.Endpoint.Services;
 using Microsoft.AspNetCore.Http;
@@ -36,6 +37,34 @@ namespace Learn2SwitchApi.Controllers
         {
             List<User> usuario = await _userService.Get();
             return Ok(usuario);
+        }
+
+        [HttpPost("login")]
+        public async Task<ActionResult> Login(LoginDTO campos)
+        {
+            List<User> usuarios = await _userService.Get();
+            ServiceEncryptDecrypt enc = new ServiceEncryptDecrypt();
+
+            bool autenticado = false;
+
+            foreach (var user in usuarios)
+            {
+                string password = enc.Decrypt(user.UserPassword);
+                if (user.UserEmail == campos.UserEmail && password == campos.UserPassword)
+                {
+                    autenticado = true;
+                    break; // Sal del bucle si la autenticación es exitosa.
+                }
+            }
+
+            if (autenticado)
+            {
+                return Ok("Login successful");
+            }
+            else
+            {
+                return Ok("Login denied");
+            }
         }
 
     }

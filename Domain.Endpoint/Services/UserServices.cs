@@ -28,6 +28,8 @@ namespace Domain.Endpoint.Services
            return nuevoUsuario;
         }
 
+
+
         public User FilterUser(Guid id)
         {
             return _userRepository.GetById(id);
